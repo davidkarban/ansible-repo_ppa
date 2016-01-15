@@ -1,5 +1,7 @@
 ---
 - hosts: localhost
-  remote_user: root
+  become: yes
   roles:
-    - repo_ppa
+    - { role: repo_ppa, name: "ppa:nginx/stable" }
+    - { role: repo_ppa, name: "ppa:brightbox/ruby-ng", state: "absent" }
+

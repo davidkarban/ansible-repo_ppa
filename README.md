@@ -22,7 +22,7 @@ Example Playbook
     - hosts: nginx_servers
       roles:
          - { role: davidkarban.repo_ppa, name: "ppa:nginx/stable" }
-         - { role: davidkarban.repo_ppa, name: 
+         - { role: davidkarban.repo_ppa, name: "ppa:brightbox/ruby-ng", state: "absent" }
 
 License
 -------
