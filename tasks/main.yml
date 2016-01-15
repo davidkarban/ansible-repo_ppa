@@ -1,0 +1,9 @@
+---
+# tasks file for repo_ppa
+- name: Check if I`m on Ubuntu
+  fail: "This role is for Ubuntu systems only"
+  when: ansible_distribution != "Ubuntu"
+
+- name: Ensure ppa repository is installed
+  apt_repository: repo='{{ name }}' state='{{ state }}'
+
