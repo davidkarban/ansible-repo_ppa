@@ -5,5 +5,5 @@
   when: ansible_distribution != "Ubuntu"
 
 - name: Ensure ppa repository is installed
-  apt_repository: repo='{{ name }}' state='{{ state }}'
+  apt_repository: repo='{{ name|mandatory }}' state='{{ state }}'
 
